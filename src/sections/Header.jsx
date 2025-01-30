@@ -35,7 +35,19 @@ const Header = () => {
                 </li>
 
                 <li className="nav-logo">
-                  <LinkScroll>
+                  {/* Add logo scroll effect to scroll to a section the user wants to go to*/}
+                  <LinkScroll
+                    to="hero"
+                    offset={-100}
+                    /*highlight active link*/
+                    spy
+                    /*add smooth scroll*/
+                    smooth
+                    /*Make logo hidden on mobile view nav options*/
+                    className={clsx(
+                      "max-lg:hidden transition-transform duration-500 cursor-pointer",
+                    )}
+                  >
                     <img
                       src="/images/xora.svg"
                       width={160}
@@ -52,6 +64,23 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+            {/* Add outline as well as pictures filling the background with the nav bar on mobile view */}
+            <div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">
+              <img
+                src="/images/bg-outlines.svg"
+                width={960}
+                height={380}
+                alt="outline"
+                className="relative z-2"
+              />
+              <img
+                src="/images/bg-outlines-fill.png"
+                width={960}
+                height={380}
+                alt="outline"
+                className="absolute inset-0 mix-blend-soft-light opacity-5"
+              />
+            </div>
           </div>
         </div>
 
