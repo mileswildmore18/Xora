@@ -1,4 +1,5 @@
 import { Link as LinkScroll } from "react-scroll";
+import { useState } from "react";
 
 const NavLink = ({ title }) => (
   <LinkScroll className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5">
@@ -6,6 +7,8 @@ const NavLink = ({ title }) => (
   </LinkScroll>
 );
 const Header = () => {
+  // Make button responsive on click
+  const [isOpen, setIsOpen] = useState(false);
   return (
     // Add header on top of all the content and make it reusable on different size devices
     <header className="fixed top-0 left-0 z-50 w-full py-10">
@@ -46,6 +49,20 @@ const Header = () => {
             </nav>
           </div>
         </div>
+
+        {/* View Hamburger icon for mobile view and hidden on desktop */}
+        <button
+          /* Make button respond to click */
+          className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+          onClick={() => setIsOpen((prevState) => !prevState)}
+        >
+          {/* Add Hamburger icon */}
+          <img
+            src={`/images/${isOpen ? "close" : "magic"}.svg`}
+            alt="magic"
+            className="size-1/2 object-contain"
+          />
+        </button>
       </div>
     </header>
   );
