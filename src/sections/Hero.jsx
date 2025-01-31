@@ -3,7 +3,7 @@ import Button from "../components/Button.jsx";
 const Hero = () => {
   return (
     // Add Hero section that appears below the Nav Bar
-    <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32 border-2 border-amber-400">
+    <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
       {/* Add an Element to scroll to the Hero section*/}
       <Element name="hero">
         {/* Add Hero section content*/}
@@ -20,6 +20,7 @@ const Hero = () => {
               We designed XORA AI Video Editor to be an easy to use, quick to
               learn, and surprisingly powerful.
             </p>
+            {/* Add a button to scroll to the Features section*/}
             <LinkScroll to="features" offset={-100} spy smooth>
               <Button icon="/images/zap.svg">Try it now</Button>
             </LinkScroll>
