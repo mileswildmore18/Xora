@@ -30,6 +30,8 @@ const Button = ({
           {children}
         </span>
       </span>
+
+      <span className="glow-before glow-after" />
     </>
   );
   // Determine if the button is a link or a button
