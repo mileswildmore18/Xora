@@ -1,5 +1,6 @@
 import { Element } from "react-scroll";
-import { features } from "../constants/index.js";
+import { features } from "../constants/index.jsx";
+import Button from "../components/Button.jsx";
 
 const Features = () => {
   return (
@@ -26,7 +27,16 @@ const Features = () => {
                     />
                   </div>
                 </div>
-                <p className="caption mb-5 max-md:mb-6 max-md:h5">{caption}</p>
+                {/* Add the caption  */}
+                <p className="caption mb-5 max-md:mb-6">{caption}</p>
+                {/* Add the title  */}
+                <h2 className="max-w-400 mb-7 h3 text-p4 max-md:mb-6 max-md:h5">
+                  {title}
+                </h2>
+                {/* Add the text  */}
+                <p className="mb-11 body-1 max-md:mb-8 max-md:body-3">{text}</p>
+                {/* Add the reusable button */}
+                <Button icon={button.icon}>{button.title}</Button>
               </div>
             ))}
           </div>
