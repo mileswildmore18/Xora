@@ -3,6 +3,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { plans } from "../constants/index.jsx";
 import CountUp from "react-countup";
+import Button from "../components/Button.jsx";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -157,9 +158,21 @@ const Pricing = () => {
                         alt="check"
                         className="size-10 object-contain"
                       />
+                      <p className="flex-1">{feature}</p>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-10 flex w-full justify-center">
+                  {/* Add the reusable button for each plan and distinguish from each other */}
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+
+                {index === 1 && (
+                  <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
+                    Limited time offer
+                  </p>
+                )}
               </div>
             ))}
           </div>
