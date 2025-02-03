@@ -129,7 +129,6 @@ const Pricing = () => {
                     </div>
                     {/* Add the monthly and yearly for their respective plans*/}
                     <div className="small-1 relative top-3 ml-1 uppercase">
-                      {" "}
                       / mo
                     </div>
                   </div>
