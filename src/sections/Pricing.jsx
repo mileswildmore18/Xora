@@ -126,8 +126,40 @@ const Pricing = () => {
                         preserveValue
                       />
                     </div>
+                    {/* Add the monthly and yearly for their respective plans*/}
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      {" "}
+                      / mo
+                    </div>
                   </div>
                 </div>
+
+                {/* Description of the plans*/}
+                <div
+                  /* Make the description responsive and middle plan stand out */
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
+                    index === 1 && "border-b",
+                  )}
+                >
+                  {/* Add the description*/}
+                  {plan.caption}
+                </div>
+                {/* Add the features of each plan*/}
+                <ul className="mx-auto space-y-4 xl:px-7">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="relative flex items-center gap-5"
+                    >
+                      <img
+                        src={"/images/check.png"}
+                        alt="check"
+                        className="size-10 object-contain"
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
