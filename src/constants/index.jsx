@@ -22,7 +22,7 @@ export const features = [
     },
   },
 ];
-
+// Add details to the features
 export const details = [
   {
     id: "0",
