@@ -108,7 +108,7 @@ export const faq = [
       "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
   },
 ];
-
+// Add to pricing section
 export const plans = [
   {
     id: "0",
