@@ -2,6 +2,7 @@ import { Element } from "react-scroll";
 import { useState } from "react";
 import clsx from "clsx";
 import { plans } from "../constants/index.jsx";
+import CountUp from "react-countup";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -97,6 +98,7 @@ const Pricing = () => {
                     index === 1 ? "pt-24" : "pt-12",
                   )}
                 >
+                  {/* Add the title of the plans*/}
                   <div
                     className={clsx(
                       "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
@@ -104,6 +106,26 @@ const Pricing = () => {
                     )}
                   >
                     {plan.title}
+                  </div>
+                  {/* Add the responsive for amount for the plans*/}
+                  <div className="relative z-2 flex items-center justify-center">
+                    <div
+                      /* Add the amount making the middle stand out */
+                      className={clsx(
+                        "h-num flex items-start",
+                        index === 1 ? "text-p3" : "text-p4",
+                      )}
+                    >
+                      {/* Add the amount countup calculation*/}${" "}
+                      {/*Make the amount responsive to the click to show the price monthly and yearly*/}
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
