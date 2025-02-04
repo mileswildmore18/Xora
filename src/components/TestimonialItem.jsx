@@ -1,0 +1,28 @@
+import clsx from "clsx";
+// Add reusable TestimonialItem
+const TestimonialItem = ({ item, containerClassName }) => {
+  return (
+    <div
+      /* Add styles to the Testimonial Items along with grids  */
+      className={clsx(
+        "relative px-14 pt-11 pb-14 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-screen after:bg-s2 after:content-[''] max-md:px-0 max-md:pt-11 after:max-md:-right-4",
+        containerClassName,
+      )}
+    >
+      {/* Add the comments of each customer */}
+      <blockquote className="h6 mb-8 text-p4">{item.comment}</blockquote>
+      <div className="flex items-center max-xl:-mr-8">
+        {/* Add a border around the picture of each customer */}
+        <div className="mr-4 size-20 shrink-0 rounded-half border-2 border-s2 p-1.5">
+          {/* Add the picture of each customer  */}
+          <img
+            src={item.avatarUrl}
+            alt={item.name}
+            className="size-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+export default TestimonialItem;
