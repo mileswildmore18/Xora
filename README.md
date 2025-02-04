@@ -21,7 +21,7 @@ You will need these npm (Node Package Manager) in order to view Xora. You will n
 npm install
 npm install clsx
 npm install react-countup
-npm install react-slidedown
+npm install react-slidedown --legacy-peer-deps
 npm install react-scroll
 ```
 
