@@ -21,6 +21,11 @@ const TestimonialItem = ({ item, containerClassName }) => {
             className="size-full object-cover"
           />
         </div>
+        {/* Add the name and role of each customer*/}
+        <div>
+          <h4 className="body-2 mb-0.5 text.p1">{item.name}</h4>
+          <p className="small-compact uppercase text-s3">{item.role}</p>
+        </div>
       </div>
     </div>
   );
