@@ -1,5 +1,6 @@
 import { Element, Link as LinkScroll } from "react-scroll";
 import Button from "../components/Button.jsx";
+
 const Hero = () => {
   return (
     // Add Hero section that appears below the Nav Bar

@@ -1,6 +1,7 @@
 // Add Testimonials section
 import { testimonials } from "../constants/index.jsx";
 import TestimonialItem from "../components/TestimonialItem.jsx";
+
 const Testimonials = () => {
   const halfLength = Math.floor(testimonials.length / 2);
   return (
