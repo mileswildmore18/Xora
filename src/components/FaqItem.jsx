@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 
 const FaqItem = ({ item, index }) => {
   const [activeId, setActiveId] = useState(null);
@@ -45,6 +47,12 @@ const FaqItem = ({ item, index }) => {
           <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
+      {/* Add answer only if current question is active  */}
+      <SlideDown>
+        {activeId === item.id && (
+          <div className="body-3 px-7 py-3.5">{item.answer}</div>
+        )}
+      </SlideDown>
     </div>
   );
 };
