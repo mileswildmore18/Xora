@@ -34,9 +34,9 @@ const FaqItem = ({ item, index }) => {
             {item.question}
           </div>
         </div>
-        {/* Add icon for faq  */}
+        {/* Add reusable button for faq  */}
         <div
-          /*  Add effect for icon when user hovers over it */
+          /*  Add effect for button when user hovers over it */
           className={clsx(
             "faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4",
             // Check if question is active and add effect of plus to minus
