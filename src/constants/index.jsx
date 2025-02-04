@@ -45,7 +45,7 @@ export const details = [
     title: "24 / 7 Customer support",
   },
 ];
-
+// Add to faq section
 export const faq = [
   {
     id: "0",
