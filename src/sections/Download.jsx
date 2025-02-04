@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import { links } from "../constants/index.jsx";
+import { links, logos } from "../constants/index.jsx";
 import Marker from "../components/Marker.jsx";
 // Add Download section
 const Download = () => {
@@ -80,6 +80,15 @@ const Download = () => {
               </div>
             </div>
           </div>
+          {/* Add the logos of different company platforms*/}
+          <ul className="mt-24 flex justify-center max-lg:hidden">
+            {/* Add the information of the companys from the index.jsx file*/}
+            {logos.map(({ id, url, width, height, title }) => (
+              <li key={id} className="mx-10">
+                <img src={url} width={width} height={height} alt={title} />
+              </li>
+            ))}
+          </ul>
         </div>
       </Element>
     </section>
